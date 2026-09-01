@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string("name")->nullable();
             $table->text("description")->nullable();
+            $table->foreignId('by_work')
+                ->constrained('works')
+                ->cascadeOnDelete();
+                
             $table->timestamps();
         });
     }

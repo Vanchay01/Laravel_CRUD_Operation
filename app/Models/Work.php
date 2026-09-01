@@ -19,7 +19,7 @@ class Work extends Model
 
     function features() : HasMany {
         return $this->hasMany(
-            feature
-        )
-    };
+            Feature::class, "by_work"
+        );
+    }
 }

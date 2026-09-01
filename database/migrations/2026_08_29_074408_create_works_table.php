@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string("demo");
             $table->string("framework");
             $table->string("description");
+            
             $table->timestamps();
         });
     }
